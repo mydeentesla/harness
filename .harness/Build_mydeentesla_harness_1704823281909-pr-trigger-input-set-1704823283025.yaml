@@ -1,0 +1,14 @@
+inputSet:
+  name: Build_mydeentesla_harness_1704823281909-pr-trigger-input-set
+  identifier: Build_mydeentesla_harness_1704823281909prtriggerinputset
+  orgIdentifier: default
+  projectIdentifier: default_project
+  pipeline:
+    identifier: Build_mydeentesla_harness_1704823281909
+    properties:
+      ci:
+        codebase:
+          build:
+            type: PR
+            spec:
+              number: <+trigger.prNumber>
