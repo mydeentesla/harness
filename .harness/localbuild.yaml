@@ -1,0 +1,35 @@
+pipeline:
+  name: localbuild
+  identifier: localbuild
+  projectIdentifier: default_project
+  orgIdentifier: default
+  tags: {}
+  properties:
+    ci:
+      codebase:
+        connectorRef: account.Github
+        repoName: https://github.com/mydeentesla/harness.git
+        build: <+input>
+  stages:
+    - stage:
+        name: build locally
+        identifier: build_locally
+        description: ""
+        type: CI
+        spec:
+          cloneCodebase: true
+          platform:
+            os: Linux
+            arch: Amd64
+          runtime:
+            type: Docker
+            spec: {}
+          execution:
+            steps:
+              - step:
+                  type: Run
+                  name: Run_1
+                  identifier: Run_1
+                  spec:
+                    shell: Sh
+                    command: echo "Hello World"
