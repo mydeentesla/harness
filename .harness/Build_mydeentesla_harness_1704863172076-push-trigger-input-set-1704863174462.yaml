@@ -1,0 +1,14 @@
+inputSet:
+  name: Build_mydeentesla_harness_1704863172076-push-trigger-input-set
+  identifier: Build_mydeentesla_harness_1704863172076pushtriggerinputset
+  orgIdentifier: default
+  projectIdentifier: default_project
+  pipeline:
+    identifier: Build_mydeentesla_harness_1704863172076
+    properties:
+      ci:
+        codebase:
+          build:
+            type: branch
+            spec:
+              branch: <+trigger.branch>
